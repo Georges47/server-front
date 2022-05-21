@@ -1,5 +1,6 @@
 {
   "name": "server",
+  "homepage": "server-front-1.herokuapp.com/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
