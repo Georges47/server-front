@@ -13,6 +13,8 @@ import {
 } from "@mui/material";
 import { LightMode, DarkMode } from '@mui/icons-material';
 
+const baseUrl = "https://server-back-1.herokuapp.com";
+
 function App({cableApp}) {
   // const [downloadUrl, setDownloadUrl] = useState("");
   const [videoTitle, setVideoTitle] = useState("");
@@ -99,7 +101,7 @@ function App({cableApp}) {
                       />
                       <Button variant="contained" style={{margin: 5}} onClick={() => {
                         //setProcessing(true);
-                        fetch(`http://192.168.0.7:8080/youtube-dl/process?url=${videoUrl}`)
+                        fetch(`${baseUrl}/youtube-dl/process?url=${videoUrl}`)
                           .then(response => response.json())
                           .then(
                             data => {
@@ -128,7 +130,7 @@ function App({cableApp}) {
                   showDownloadButton &&
                   <Box style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", marginTop: 10}}>
                     <Typography style={{color: "#1976d2", marginBottom: 5, fontWeight: 'bold'}}> { videoTitle } </Typography>
-                    <Button variant="contained" component="a" href={`http://192.168.0.7:8080/song?filename=${filename}`}> Descargar </Button>
+                    <Button variant="contained" component="a" href={`${baseUrl}/song?filename=${filename}`}> Descargar </Button>
                   </Box>
                 }
               </Box>
