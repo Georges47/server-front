@@ -4,10 +4,8 @@ import './index.css';
 import App from './App';
 import actionCable from 'actioncable';
 
-const baseUrl = "https://server-back-1.herokuapp.com";
-
 const CableApp = {};
-CableApp.cable = actionCable.createConsumer(`ws://${baseUrl}/cable`);
+CableApp.cable = actionCable.createConsumer(`ws://server-back-1.herokuapp.com/cable`);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
