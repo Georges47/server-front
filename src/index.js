@@ -6,7 +6,7 @@ import actionCable from 'actioncable';
 
 const CableApp = {};
 
-CableApp.cable = actionCable.createConsumer(`ws://server-back-1.herokuapp.com/cable`);
+CableApp.cable = actionCable.createConsumer(`ws://${process.env.REACT_APP_RASPBERRY_IP}:8080/cable`);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

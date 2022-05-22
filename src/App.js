@@ -13,7 +13,7 @@ import {
 } from "@mui/material";
 import { LightMode, DarkMode } from '@mui/icons-material';
 
-const baseUrl = "http://localhost:8080";
+const baseUrl = `http://${process.env.REACT_APP_RASPBERRY_IP}:8080`;
 
 function App({cableApp}) {
   // const [downloadUrl, setDownloadUrl] = useState("");
@@ -130,7 +130,7 @@ function App({cableApp}) {
                   showDownloadButton &&
                   <Box style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", marginTop: 10}}>
                     <Typography style={{color: "#1976d2", marginBottom: 5, fontWeight: 'bold'}}> { videoTitle } </Typography>
-                    <Button variant="contained" component="a" href={`${baseUrl}/song?filename=${filename}`}> Descargar </Button>
+                    <Button variant="contained" component="a" href={`${baseUrl}/youtube-dl/song?filename=${filename}`}> Descargar </Button>
                   </Box>
                 }
               </Box>
