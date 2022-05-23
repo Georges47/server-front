@@ -16,7 +16,6 @@ import { LightMode, DarkMode } from '@mui/icons-material';
 const baseUrl = `http://${process.env.REACT_APP_HOST}:8080`;
 
 function App({cableApp}) {
-  // const [downloadUrl, setDownloadUrl] = useState("");
   const [videoTitle, setVideoTitle] = useState("");
   const [videoUrl, setVideoUrl] = useState("");
   const [downloadMessages, setDownloadMessages] = useState([""]);
